@@ -1,0 +1,174 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.page {
+  background-color: #f2f2f2;
+  border: 3px solid black;
+  height: 95%;
+  width: 93%;
+  display: none;
+  position: relative;
+  gap: 20px;
+  padding: 10px;
+}
+
+.active {
+  display: flex;
+    flex-direction: column;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main {
+  width: 450px;
+  height: 650px;
+  background-color: #7a24cf;
+  border: 3px solid black;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
+}
+
+header {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.main {
+  height: 70%;
+  overflow-y: auto;
+}
+
+footer {
+  height: 15%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+
+.add-button {
+  position: absolute;
+  left: 80%;
+  top: 10%;
+}
+
+.add-button button {
+  background-color: #7a24cf;
+  color: white;
+  font-size: 20px;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  box-shadow: 1px 1px 1px 1px black;
+}
+
+.footer-button {
+  padding: 8px;
+  border-radius: 10px;
+  height: 75%;
+  width: 40%;
+  border: none;
+  background-color: #7a24cf;
+  color: white;
+  cursor: pointer;
+  box-shadow: 1px 1px 1px 1px black;
+}
+
+#submitBtn{
+  filter: grayscale(1);
+}
+
+button:hover{
+  filter: brightness(0.85);
+}
+
+
+label{
+  font-weight: bold;
+}
+
+.radio-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.image-radio {
+  position: relative;
+}
+
+.image-radio input[type="radio"] {
+  display: none;
+}
+
+.image-radio img {
+  width: 80px;
+  height: 80px;
+  border: 4px solid transparent;
+  border-radius: 40px;
+  cursor: pointer;
+  transition: border 0.3s ease;
+}
+
+.image-radio input[type="radio"]:checked + img {
+  border-color: #7a24cf;
+}
+
+.image-radio img:hover {
+  border-color: #cccccc;
+}
+
+
+.user {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.user ul {
+  list-style-type: none;
+}
+
+#balancesContainer .user{
+  flex-direction: column;
+}
+
+.profile-picture {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+#expenseDiv{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#expenseDiv div:nth-child(2){
+  display: flex;
+  align-items: center;
+}
+
+
+#money{
+
+  width: 50px;
+  height: 50px;
+}
+

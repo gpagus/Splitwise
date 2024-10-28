@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./src/css/style.css">
+  <script src="./src/js/index.js" defer></script>
+  <title>SplitWise</title>
+</head>
+
+<body>
+  <main>
+    <div id="home" class="page active">
+      <header>
+        <h2>Home</h2>
+      </header>
+      <div class="add-button">
+        <button onclick="displayPage('add-expense')">+</button>
+      </div>
+      <div class="main" id="expensesContainer">
+      </div>
+      <footer>
+        <button class="footer-button" onclick="displayPage('users')">Users</button>
+        <button class="footer-button" onclick="displayPage('balances')">Balances</button>
+      </footer>
+
+    </div>
+
+    <div id="users" class="page">
+      <header>
+        <h2>Users</h2>
+      </header>
+      <div class="main" id="usersContainer">
+      </div>
+      <footer>
+        <button class="footer-button" onclick="displayPage('home')">Home</button>
+        <button class="footer-button" onclick="displayPage('add-user')">Add user</button>
+      </footer>
+    </div>
+
+    <div id="add-user" class="page">
+      <header>
+        <h2>Add an user</h2>
+      </header>
+      <form id="add-user-form" class="main">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="username"> <br><br>
+        <label for="genre">Genre:</label> <br>
+        <input type="radio" value="men" name="genre">&nbsp;&nbsp; Men <br>
+        <input type="radio" value="women" name="genre">&nbsp;&nbsp; Women <br><br>
+
+        <label for="radio-container">Icon:</label>
+        <div class="radio-container">
+          <label class="image-radio">
+            <input type="radio" name="option" value="1">
+            <img src="./src/images/pfp1.png" alt="Option 1">
+          </label>
+          <label class="image-radio">
+            <input type="radio" name="option" value="2">
+            <img src="./src/images/pfp2.png" alt="Option 2">
+          </label>
+          <label class="image-radio">
+            <input type="radio" name="option" value="3">
+            <img src="./src/images/pfp3.png" alt="Option 3">
+          </label>
+          <label class="image-radio">
+            <input type="radio" name="option" value="4">
+            <img src="./src/images/pfp4.png" alt="Option 4">
+          </label>
+        </div>
+        <footer>
+          <button class="footer-button" type="button" onclick="displayPage('users')">Back</button>
+          <button class="footer-button" id="submitBtn" disabled>Confirm</button>
+        </footer>
+      </form>
+    </div>
+
+    <div id="balances" class="page">
+      <header>
+        <h2>Balances</h2>
+      </header>
+      <div class="main" id="balancesContainer">
+      </div>
+      <footer>
+        <button class="footer-button" onclick="displayPage('home')">Home</button>
+        <button class="footer-button" id="settleUpBtn">Settle Up</button>
+      </footer>
+
+
+    </div>
+
+    <div id="add-expense" class="page">
+      <header>
+        <h2>Add an expense</h2>
+      </header>
+      <form id="add-expense-form" class="main">
+        <label for="user">User:</label>
+        <select id="user" name="user">
+        </select>
+        <br><br>
+
+        <label for="amount">Amount:</label>
+        <input type="number" id="amount" name="amount" step="0.01" min="0">
+        <br><br>
+
+        <label for="title">Title:</label>
+        <input type="text" id="title" name="title">
+        <br><br>
+
+        <input type="hidden" id="creation-date" name="creation-date" value="">
+
+        <footer>
+          <button class="footer-button" type="button" onclick="displayPage('home')">Back</button>
+          <button class="footer-button" type="submit" id="confirmBtn" disabled>Confirm</button>
+        </footer>
+      </form>
+    </div>
+  </main>
+</body>
+
+</html>
